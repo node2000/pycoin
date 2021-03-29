@@ -10,7 +10,7 @@ Wallet commands list :
 
 /import - import wallet (private key)
 
-# cash cmd's :
+# balance settings :
 
 /receive - get PyCoin
 
