@@ -1,16 +1,16 @@
-# pycoin
+# Pycoin
 
 PyCoin - simple cash system
 
 Wallet commands list :
 
-# start cmd's :
+# Start cmd's :
 
 /create - create PyCoin wallet
 
 /import - import wallet (private key)
 
-# balance settings :
+# Balance settings :
 
 /receive - get PyCoin
 
