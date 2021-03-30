@@ -15,7 +15,7 @@ if wlcmd == "/create":
     print(" ")
     i = 1
     while i > 0:
-        prblnc = balance + 2403671917315073614680224758485033610754121567618907204083050215737715695785
+        prblnc = balance
         print("Cmd list:")
         print("/receive - get PyCoin")
         print("/send - send your PyCoin (generate transaction key)")
@@ -34,20 +34,14 @@ if wlcmd == "/create":
             print(" ")
         if cmd == "/receive":
             trxk = input("Paste transaction/mining key - ")
-            if trxk == check:
-                print("Fail")
-            if trxk == ptrx:
-                print("Fail")
-            if trxk == pk:
-                print("Fail")
-            else:
-                res = literal_eval(trxk)
-                newbalance = balance + res - 2403671917315073614680224758485033610754121567618907204083050215737715695785
-                balance = newbalance
-                print("Transaction confirmed!")
-                print("New balance - " + str(balance)+ " CPN")
-                print(" ")
-                check = trxk
+            res = literal_eval(trxk)
+            newbalance = balance + res
+            balance = newbalance
+            print("Transaction confirmed!")
+            print("New balance - " + str(balance) + " CPN")
+            print(" ")
+            check = trxk
+
         if cmd == "/send":
             amnt = int(input('Type amount of funds - '))
             if amnt < balance:
@@ -55,7 +49,7 @@ if wlcmd == "/create":
                    print('Fail')
                 else:
                    balance = int(balance) - int(amnt)
-                   pamnt = amnt + 2403671917315073614680224758485033610754121567618907204083050215737715695785
+                   pamnt = amnt
                    ptrx = hex(pamnt)
                    print('Send this transaction key to receiver - ' + str(ptrx))
             else:
@@ -64,14 +58,14 @@ if wlcmd == "/create":
 if wlcmd == "/import":
     pkimpt = input("Type your private key - ")
     res = literal_eval(pkimpt)
-    newbalance = balance + res - 2403671917315073614680224758485033610754121567618907204083050215737715695785
+    newbalance = balance + res
     balance = newbalance
     print("Wallet imported!")
     print("Your balance - "+str(balance)+" CPN")
     print(" ")
     i = 1
     while i > 0:
-        prblnc = balance + 2403671917315073614680224758485033610754121567618907204083050215737715695785
+        prblnc = balance
         print("Cmd list:")
         print("/receive - get PyCoin")
         print("/send - send your PyCoin (generate transaction key)")
@@ -90,20 +84,13 @@ if wlcmd == "/import":
             print(" ")
         if cmd == "/receive":
             trxk = input("Paste transaction/mining key - ")
-            if trxk == check:
-                print("Fail")
-            if trxk == ptrx:
-                print("Fail")
-            if trxk == pk:
-                print("Fail")
-            else:
-                res = literal_eval(trxk)
-                newbalance = balance + res - 2403671917315073614680224758485033610754121567618907204083050215737715695785
-                balance = newbalance
-                print("Transaction confirmed!")
-                print("New balance - " + str(balance)+ " CPN")
-                print(" ")
-                check = trxk
+            res = literal_eval(trxk)
+            newbalance = balance + res
+            balance = newbalance
+            print("Transaction confirmed!")
+            print("New balance - " + str(balance) + " CPN")
+            print(" ")
+            check = trxk
         if cmd == "/send":
             amnt = int(input('Type amount of funds - '))
             if amnt < balance:
@@ -111,7 +98,7 @@ if wlcmd == "/import":
                    print('Fail')
                 else:
                    balance = int(balance) - int(amnt)
-                   pamnt = amnt + 2403671917315073614680224758485033610754121567618907204083050215737715695785
+                   pamnt = amnt
                    ptrx = hex(pamnt)
                    print('Send this transaction key to receiver - ' + str(ptrx))
             else:
