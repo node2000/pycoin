@@ -33,7 +33,7 @@ if wlcmd == "/create":
             print("Your balance - "+ str(balance)+ " CPN")
             print(" ")
         if cmd == "/receive":
-            trxk = input("Paste transaction key - ")
+            trxk = input("Paste transaction/mining key - ")
             if trxk == check:
                 print("Fail")
             if trxk == ptrx:
@@ -45,7 +45,7 @@ if wlcmd == "/create":
                 newbalance = balance + res - 2403671917315073614680224758485033610754121567618907204083050215737715695785
                 balance = newbalance
                 print("Transaction confirmed!")
-                print("New balance - " + str(balance))
+                print("New balance - " + str(balance)+ " CPN")
                 print(" ")
                 check = trxk
         if cmd == "/send":
@@ -60,7 +60,7 @@ if wlcmd == "/create":
                    print('Send this transaction key to receiver - ' + str(ptrx))
             else:
                 print('Not enough funds to make this operation :(')
-            print('Final balance - ' + str(balance))
+            print('Final balance - ' + str(balance)+ " CPN")
 if wlcmd == "/import":
     pkimpt = input("Type your private key - ")
     res = literal_eval(pkimpt)
@@ -89,7 +89,7 @@ if wlcmd == "/import":
             print("Your balance - "+ str(balance)+ " CPN")
             print(" ")
         if cmd == "/receive":
-            trxk = input("Paste transaction key - ")
+            trxk = input("Paste transaction/mining key - ")
             if trxk == check:
                 print("Fail")
             if trxk == ptrx:
@@ -101,7 +101,7 @@ if wlcmd == "/import":
                 newbalance = balance + res - 2403671917315073614680224758485033610754121567618907204083050215737715695785
                 balance = newbalance
                 print("Transaction confirmed!")
-                print("New balance - " + str(balance))
+                print("New balance - " + str(balance)+ " CPN")
                 print(" ")
                 check = trxk
         if cmd == "/send":
@@ -116,4 +116,4 @@ if wlcmd == "/import":
                    print('Send this transaction key to receiver - ' + str(ptrx))
             else:
                 print('Not enough funds to make this operation :(')
-            print('Final balance - ' + str(balance))
+            print('Final balance - ' + str(balance)+ " CPN")
