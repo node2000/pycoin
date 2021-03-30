@@ -33,7 +33,7 @@ if wlcmd == "/create":
             print("Your balance - "+ str(balance)+ " CPN")
             print(" ")
         if cmd == "/receive":
-            trxk = input("Paste transaction/mining key - ")
+            trxk = input("Paste transaction/mining/private key - ")
             res = literal_eval(trxk)
             newbalance = balance + res
             balance = newbalance
@@ -83,7 +83,7 @@ if wlcmd == "/import":
             print("Your balance - "+ str(balance)+ " CPN")
             print(" ")
         if cmd == "/receive":
-            trxk = input("Paste transaction/mining key - ")
+            trxk = input("Paste transaction/mining/private key - ")
             res = literal_eval(trxk)
             newbalance = balance + res
             balance = newbalance
