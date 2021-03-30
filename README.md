@@ -2,8 +2,6 @@
 
 PyCoin - simple cash system
 
-Wallet commands list :
-
 # Start cmd's :
 
 /create - create PyCoin wallet
